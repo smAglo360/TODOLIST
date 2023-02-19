@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddNote">
+
+    <EditText
+        android:id="@+id/editTextNoteText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_gray"
+        android:hint="@string/enter_your_note"
+        android:inputType="text"
+        android:padding="16dp"
+        android:textColor="@color/text_color"
+        tools:ignore="VisualLintTextFieldSize" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioButtonLow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_blue"
+            android:padding="8dp"
+            android:text="@string/low"
+            android:textColor="@color/blue_radio_btn_text_color"
+            android:textSize="16sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <RadioButton
+            android:id="@+id/radioButtonMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_yellow"
+            android:padding="8dp"
+            android:text="@string/medium"
+            android:textColor="@color/yellow_radio_btn_text_color"
+            android:textSize="16sp"
+            tools:ignore="VisualLintButtonSize" />
+
+        <RadioButton
+            android:id="@+id/radioButtonHigh"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_btn_red"
+            android:padding="8dp"
+            android:text="@string/high"
+            android:textColor="@color/red_radio_btn_text_color"
+            android:textSize="16sp"
+            tools:ignore="VisualLintButtonSize" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_your_deadline_time"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        />
+
+    <CalendarView
+        android:id="@+id/calendarViewDeadlineDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/calendar_gray"
+
+        android:minDate="01/01/2023"
+        android:textAlignment="center" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonCreateNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cornerRadius="4dp"
+        android:layout_margin="16dp"
+        android:paddingHorizontal="8dp"
+        android:paddingVertical="16dp"
+        android:text="@string/create_note"
+        android:textColor="@color/yellow_radio_btn_text_color"
+        android:backgroundTint="@color/create_note_btn"
+        tools:ignore="VisualLintButtonSize" />
+</LinearLayout>
